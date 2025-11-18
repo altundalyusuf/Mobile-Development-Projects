@@ -44,4 +44,13 @@ Since this is a collection of independent projects, you need to navigate into th
     npx expo start
     ```
 
+## 📬 Contact
+
+If you have any questions or suggestions about the codes, feel free to reach out!
+
+- **GitHub:** [altundalyusuf](https://github.com/altundalyusuf)
+- **LinkedIn:** [Yusuf Altundal](https://linkedin.com/in/yusufaltundal)
+
+---
+
 _Happy Coding!_
