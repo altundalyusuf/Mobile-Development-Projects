@@ -9,7 +9,7 @@ Here you will find everything from beginner exercises to fully functional applic
 | Project Name                           | Description                                                                          | Key Concepts                             | Status |
 | :------------------------------------- | :----------------------------------------------------------------------------------- | :--------------------------------------- | :----: |
 | **[Guess My Number](./GuessMyNumber)** | A game where the phone tries to guess the user's number based on higher/lower hints. | State Management, Flexbox, Expo          |   ✅   |
-| **[Meals App](./MealsApp)**            | An app that uses react navigation to show meals and their details.                   | React Navigation, State Management, Expo |   🚧   |
+| **[Meals App](./MealsApp)**            | An app that uses react navigation to show meals, favorites and their details.                   | React Navigation, State Management, Expo |   ✅   |
 
 _(Note: Click on the project name to navigate to its specific folder and README.)_
 
