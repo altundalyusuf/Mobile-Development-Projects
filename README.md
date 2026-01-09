@@ -6,12 +6,13 @@ Here you will find everything from beginner exercises to fully functional applic
 
 ## 📂 Project Index
 
-| Project Name                            | Description                                                                           | Key Concepts                              | Status |
-| :-------------------------------------- | :------------------------------------------------------------------------------------ | :---------------------------------------- | :----: |
-| **[Guess My Number](./GuessMyNumber)**  | A game where the phone tries to guess the user's number based on higher/lower hints.  | State Management, Flexbox, Expo           |   ✅   |
-| **[Meals App](./MealsApp)**             | An app that uses react navigation to show meals, favorites and their details.         | React Navigation, State Management, Expo  |   ✅   |
-| **[Expense Tracker](./ExpenseTracker)** | An application to track daily expenses, manage categories, and analyze spending.      | CRUD Operations, HTTP Requests, User Input  |   ✅   |
-| **[User Authentication](./UserAuthApp)** | An application to implement user authentication.      | User authentication, tokens, navigation, state  |   🚧   |
+| Project Name                             | Description                                                                           | Key Concepts                                   | Status |
+| :--------------------------------------- | :------------------------------------------------------------------------------------ | :--------------------------------------------- | :----: |
+| **[Guess My Number](./GuessMyNumber)**   | A game where the phone tries to guess the user's number based on higher/lower hints.  | State Management, Flexbox, Expo                |   ✅   |
+| **[Meals App](./MealsApp)**              | An app that uses react navigation to show meals, favorites and their details.         | React Navigation, State Management, Expo       |   ✅   |
+| **[Expense Tracker](./ExpenseTracker)**  | An application to track daily expenses, manage categories, and analyze spending.      | CRUD Operations, HTTP Requests, User Input     |   ✅   |
+| **[User Authentication](./UserAuthApp)** | An application to implement user authentication.                                      | User authentication, tokens, navigation, state |   ✅   |
+| **[Favorite Places](./FavoritePlaces)**  | An application to implement native device features (camera, location & more...)       | Native Device Features                         |   🚧   |
 
 _(Note: Click on the project name to navigate to its specific folder and README.)_
 
@@ -20,7 +21,8 @@ _(Note: Click on the project name to navigate to its specific folder and README.
 - **Core:** React Native, JavaScript/TypeScript
 - **Platform:** Expo
 - **Navigation:** React Navigation (Stack, Tab, Drawer)
-- **State Management:** Context API, Redux (planned)
+- **State Management:** Context API, Redux
+- **Data Management** Firebase, AsyncStorage
 - **Styling:** StyleSheet, Flexbox
 
 ## 🚀 How to Run a Project
