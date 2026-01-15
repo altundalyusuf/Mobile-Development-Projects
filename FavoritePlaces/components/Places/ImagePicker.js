@@ -4,11 +4,11 @@ import {
   useCameraPermissions,
   PermissionStatus,
 } from "expo-image-picker";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Colors } from "../../constants/colors";
 import OutlinedButon from "../UI/OutlinedButton";
 
-function ImagePicker() {
+function ImagePicker({ onTakeImage, defaultImage }) {
   const [pickedImage, setPickedImage] = useState();
 
   const [cameraPermissionInformation, requestPermission] =
@@ -32,6 +32,12 @@ function ImagePicker() {
     return true;
   }
 
+  useEffect(() => {
+    if (defaultImage) {
+      setPickedImage(defaultImage);
+    }
+  }, [defaultImage]);
+
   async function takeImageHandler() {
     const hasPermission = await verifyPermissions();
 
@@ -47,6 +53,7 @@ function ImagePicker() {
 
     if (!image.canceled) {
       setPickedImage(image.assets[0].uri);
+      onTakeImage(image.assets[0].uri);
     }
   }
 
