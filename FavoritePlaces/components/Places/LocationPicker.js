@@ -13,7 +13,7 @@ import {
 
 import OutlinedButton from "../UI/OutlinedButton.js";
 import { Colors } from "../../constants/colors.js";
-import { getMapPreview } from "../../util/location.js";
+import { getAddress, getMapPreview } from "../../util/location.js";
 
 function LocationPicker({ onPickLocation, enteredTitle, enteredImage }) {
   const [pickedLocation, setPickedLocation] = useState();
@@ -27,16 +27,34 @@ function LocationPicker({ onPickLocation, enteredTitle, enteredImage }) {
 
   useEffect(() => {
     if (isFocused && route.params) {
-      const mapPickedLocation = {
-        lat: route.params.pickedLat,
-        lng: route.params.pickedLng,
-      };
-      setPickedLocation(mapPickedLocation);
+      const mapPickedLocation = route.params.pickedLat
+        ? {
+            lat: route.params.pickedLat,
+            lng: route.params.pickedLng,
+          }
+        : null;
+      if (mapPickedLocation) {
+        setPickedLocation(mapPickedLocation);
+      }
     }
   }, [route, isFocused]);
 
   useEffect(() => {
-    onPickLocation(pickedLocation);
+    async function handleLocation() {
+      if (pickedLocation) {
+        let address = "Address not found";
+
+        try {
+          address = await getAddress(pickedLocation.lat, pickedLocation.lng);
+        } catch (error) {
+          console.log("Address retrieval failed:", error);
+        }
+
+        onPickLocation({ ...pickedLocation, address: address || "No address" });
+      }
+    }
+
+    handleLocation();
   }, [pickedLocation, onPickLocation]);
 
   async function verifyPermissions() {
