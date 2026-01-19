@@ -22,6 +22,11 @@
       },
       "edgeToEdgeEnabled": true
     },
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#000000",
+      "translucent": false
+    },
     "web": {
       "favicon": "./assets/favicon.png"
     },
@@ -31,7 +36,8 @@
         {
           "cameraPermission": "The app needs access to your camera to take photos of your favorite places."
         }
-      ]
+      ],
+      "expo-sqlite"
     ]
   }
 }

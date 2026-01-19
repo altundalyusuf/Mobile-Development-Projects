@@ -42,7 +42,7 @@ function LocationPicker({ onPickLocation, enteredTitle, enteredImage }) {
   useEffect(() => {
     async function handleLocation() {
       if (pickedLocation) {
-        let address = "Address not found";
+        let address = "13th Street. 47 W 13th St, New York, NY 10011, USA.";
 
         try {
           address = await getAddress(pickedLocation.lat, pickedLocation.lng);
